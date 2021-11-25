@@ -46,3 +46,10 @@ isCustomer = async (req, res, next)  => {
         res.status('403').send({message: 'User not found', status: false});
     }  
 }
+
+let verification = {
+    varifyToken: verifyToken,
+    isAdmin: isAdmin,
+    isCustomer: isCustomer
+};
+module.exports = verification;
