@@ -9,7 +9,8 @@ class StaggingConfig extends BaseConfig {
                 dbUser: process.env.STAGING_DB_USER,
                 dbPassword: process.env.STAGING_DB_PASSWORD,
                 dbPort: process.env.STAGING_DB_PORT,
-                db: process.env.STAGING_DB
+                db: process.env.STAGING_DB,
+                secret: process.env.SECRET
             },
         )
     }

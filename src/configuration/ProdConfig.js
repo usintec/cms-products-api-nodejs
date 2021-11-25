@@ -9,7 +9,8 @@ class ProdConfig extends BaseConfig {
                 dbUser: process.env.PROD_DB_USER,
                 dbPassword: process.env.PROD_DB_PASSWORD,
                 dbPort: process.env.PROD_DB_PORT,
-                db: process.env.PROD_DB
+                db: process.env.PROD_DB,
+                secret: process.env.SECRET
             },
         )
     }

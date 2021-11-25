@@ -4,6 +4,7 @@ const DevConfig = require('./DevConfig');
 const ProdConfig = require('./ProdConfig');
 const StaggingConfig = require('./StaggingConfig');
 class Enviroment {
+    instance;
     constructor(name){
         this.name = name;
     }

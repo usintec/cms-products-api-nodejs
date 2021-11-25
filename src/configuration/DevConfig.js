@@ -9,7 +9,8 @@ class DevConfig extends BaseConfig {
                 dbUser: process.env.DEV_DB_USER,
                 dbPassword: process.env.DEV_DB_PASSWORD,
                 dbPort: process.env.DEV_DB_PORT,
-                db: process.env.DEV_DB
+                db: process.env.DEV_DB,
+                secret: process.env.SECRET
             },
         )
     }
