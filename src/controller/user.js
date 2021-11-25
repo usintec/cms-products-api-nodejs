@@ -12,7 +12,7 @@ exports.signupCustomer = async (req, res) => {
             email: req.body.email,
             password: bcrypt.hashSync(req.body.password)
         });
-        let role = await Role.find({
+        let role = await Role.findAll({
             where: {
                 name: 'admin'
             }
@@ -33,7 +33,7 @@ exports.signupCustomer = async (req, res) => {
 
 exports.signinCustomer = async (req, res) => {
     try{
-        let user = await User.find({
+        let user = await User.findOne({
             where: {
                 email: req.body.email
             }
@@ -41,7 +41,8 @@ exports.signinCustomer = async (req, res) => {
         if(!user)
             return res.status(403).send({message: 'User not found',
             success: false});
-        
+            console.log(user.password);
+        console.log(user.password);
         let valid = bcrypt.compareSync(req.body.password, user.password);
         if(!valid)
             return res.status(403).send({message: 'Invalid password', success: false});
